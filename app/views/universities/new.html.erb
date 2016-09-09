@@ -1,5 +1,20 @@
-<h1>New University</h1>
 
-<%= render 'form' %>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<%= link_to 'Back', universities_path %>
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+	<h1 style="text-align:center">New University</h1>
+
+	<%= render 'form' %>
+
+	<button class="btn btn-danger"><%= link_to 'Back', universities_path %></button> 
+</div>
+
+
+<% end %>
+
+</html>
+

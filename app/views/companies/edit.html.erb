@@ -1,6 +1,21 @@
-<h1>Editing Company</h1>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<%= render layout: 'shared/search_box' do %>
+
+<h1 style="text-align:center">Editing Company</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+<button class="btn-success">Show</button> 
+<button class="btn-info">Back</button> 
+<% end %>
+
+</html>
+
+
+
+
+

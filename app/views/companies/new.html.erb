@@ -1,21 +1,16 @@
-<h1>New Company</h1>
 
-<!--<%= render 'form' %>-->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<%= form_for :company, url: companies_path do |f| %>
-  <p>
-    <%= f.label :name, "Name" %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :president, "President" %><br>
-    <%= f.text_field :president %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+	<h1 style="text-align:center">New Company</h1>
+
+<%= render 'form' %>
 <% end %>
+</div>
 
-<%= link_to 'Back', companies_path %>
+
+</html>

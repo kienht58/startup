@@ -1,8 +1,16 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<h1>Listing News Events</h1>
+<%= render layout: 'shared/search_box' do %>
 
-<table>
+    <div class="container">
+        <p id="notice"><%= notice %></p>
+
+<h1 style="text-align:center">Listing News Events</h1>
+
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Title</th>
@@ -22,9 +30,9 @@
         <td><%= news_event.author %></td>
         <td><%= news_event.content %></td>
         <td><%= news_event.university %></td>
-        <td><%= link_to 'Show', [news_event.university, news_event] %></td>
-        <td><%= link_to 'Edit', edit_university_news_event_path(news_event.university, news_event) %></td>
-        <td><%= link_to 'Destroy', [news_event.university, news_event], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button class="btn btn-success"><%= link_to 'Show', [news_event.university, news_event] %></button> </td>
+        <td><button class="btn btn-info"><%= link_to 'Edit', edit_university_news_event_path(news_event.university, news_event) %></button> </td>
+        <td><button class="btn btn-danger"><%= link_to 'Destroy', [news_event.university, news_event], method: :delete, data: { confirm: 'Are you sure?' } %></button> </td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +40,8 @@
 
 <br>
 
-<%= link_to 'New News event', new_university_news_event_path %>
+<button class="btn btn-success"><%= link_to 'New News event', new_university_news_event_path %></button> 
+    </div>
+<% end %>
+
+</html>

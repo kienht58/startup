@@ -1,13 +1,20 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<h1>Students</h1>
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<table>
+<h1 style="text-align:center">Students</h1>
+
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Name</th>
       <th>University</th>
-	    <th>Major</th>
+      <th>Major</th>
       <th colspan="5"></th>
     </tr>
   </thead>
@@ -17,10 +24,10 @@
       <tr>
         <td><%= student.name %></td>
         <td><%= student.university %></td>
-		    <td><%= student.major %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= student.major %></td>
+        <td><button class="btn btn-success"><%= link_to 'Show', student %></button> </td>
+        <td><button class="btn btn-info"><%= link_to 'Edit', edit_student_path(student) %></button> </td>
+        <td><button class="btn btn-danger"><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></button> </td>
       </tr>
     <% end %>
   </tbody>
@@ -28,8 +35,11 @@
 
 <br>
 
-<% if user_signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br />
+<button class="btn btn-success"><%= link_to 'New student', new_student_path %></button> 
+</div>
+
+
 <% end %>
 
-<%= link_to 'New student', new_student_path %>
+</html>
+

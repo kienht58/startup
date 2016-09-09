@@ -1,4 +1,7 @@
-<%= form_for(@jobdemand) do |f| %>
+<div class="container">
+  <div class="row">
+      <div class="form form-horizontal">
+        <%= form_for(@jobdemand) do |f| %>
   <% if @jobdemand.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@jobdemand.errors.count, "error") %> prohibited this jobdemand from being saved:</h2>
@@ -11,40 +14,45 @@
     </div>
   <% end %>
   
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <label class="col-md-2">Title</label>
+    <input type="text" class="col-md-10" name="title">
   </div>
-  <div class="field">
-    <%= f.label :overview %><br>
-    <%= f.text_field :overview %>
+  <div class="form-group">
+    <label class="col-md-2">Overview</label>
+    <input type="text" class="col-md-10" name="overview">
   </div>
-  <div class="field">
-    <%= f.label :responsibility %><br>
-    <%= f.text_field :responsibility %>
+  <div class="form-group">
+    <label class="col-md-2">Responsibility</label>
+    <input type="text" class="col-md-10" name="responsibility">
   </div>
-  <div class="field">
-    <%= f.label :competency %><br>
-    <%= f.text_field :competency %>
+  <div class="form-group">
+    <label class="col-md-2">Competency</label>
+    <input type="text" class="col-md-10" name="competency">
   </div>
-  <div class="field">
-    <%= f.label :education %><br>
-    <%= f.text_field :education %>
+  <div class="form-group">
+    <label class="col-md-2">Education</label>
+    <input type="text" class="col-md-10" name="education">
   </div>
-  <div class="field">
-    <%= f.label :workexperience %><br>
-    <%= f.text_field :workexperience %>
+  <div class="form-group">
+    <label class="col-md-2">Work experiene</label>
+    <input type="text" class="col-md-10" name="workexperience">
   </div>
-  <div class="field">
-    <%= f.label :launguage %><br>
-    <%= f.text_field :launguage %>
+  <div class="form-group">
+    <label class="col-md-2">Language</label>
+    <input type="text" class="col-md-10" name="launguage">
   </div>
-  <div class="field">
-    <%= f.label :other %><br>
-    <%= f.text_field :other %>
+  <div class="form-group">
+    <label class="col-md-2">Other</label>
+    <input type="text" class="col-md-10" name="other">
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-success pull-right" type='Submit'>Submit</button>
   </div>
 <% end %>
+      </div>
+  </div>
+</div>
+
+

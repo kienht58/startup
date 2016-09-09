@@ -1,25 +1,16 @@
-<div class="container"> 
- <div class="col-md-6">
-  <nav class="navbar navbar-inverse navbar-fixed-top"> 
-   <div class="container-fluid"> 
-    <div class="navbar-header"> 
-     <a class="navbar-brand" href="#">Startup Community</a> 
-    </div> 
-   </div> 
-  </nav> 
- </div> 
- <% [*(1..5)].each do |idx| %> 
- <%= "<br />".html_safe %> 
- <% end %> 
- 
- <div class="col-md-3"> 
-  <div class="panel panel-primary"> 
-   <div class="panel-heading"><h1 class="panel-title">Editing student</h1></div> 
-   <div class="panel-body">
-    <%= render 'form' %>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-    <%= link_to 'Show', @student %>
-   </div>
-  </div>
- </div>
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+  <h1 style="text-align:center">Editing student</h1>
+
+<%= render 'form' %>
+<button class="btn btn-danger"><%= link_to 'Back', @student %></button> 
 </div>
+
+<% end %>
+
+</html>

@@ -1,6 +1,6 @@
 class ScholarshipsController < ApplicationController
   before_action :set_scholarship, only: [:show, :edit, :update, :destroy]
-#  before_filter :load_university
+  before_filter :load_university
   # GET /scholarships
   # GET /scholarships.json
   def index
@@ -83,9 +83,9 @@ class ScholarshipsController < ApplicationController
       @scholarship = Scholarship.find(params[:id])
     end
 
-#    def load_university
-#      @university = University.find(params[:university_id])
-#    end
+   def load_university
+     @university = University.find(params[:university_id])
+   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scholarship_params

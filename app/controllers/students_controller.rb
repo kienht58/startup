@@ -2,9 +2,7 @@ class StudentsController < ApplicationController
 	before_action :set_student, only: [:show, :edit, :update, :destroy]
 
 	def index
-	  @q = Student.search(search_params)
-          @students = @q
-            .result
+	  @students = Student.all
 	end
 
 	def show

@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -35,5 +42,12 @@
   <%= @admission.contact %>
 </p>
 
-<%= link_to 'Edit', edit_university_admission_path(@admission.university, @admission) %> |
-<%= link_to 'Back', university_path(@admission.university) %>
+<button class="btn btn-info"><%= link_to 'Edit', edit_university_admission_path(@admission.university, @admission) %></button>  
+<button class="btn btn-danger"><%= link_to 'Back', university_path(@admission.university) %></button> 
+<% end %>
+</div>
+
+
+</html>
+
+

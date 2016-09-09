@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -40,4 +47,10 @@
   <%= @jobdemand.other %>
 </p>
 
-<%= link_to 'Edit', edit_jobdemand_path(@jobdemand) %> |
+<button class="btn btn-info"><%= link_to 'Edit', edit_jobdemand_path(@jobdemand) %></button> 
+<% end %>
+</div>
+
+
+</html>
+

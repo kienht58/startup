@@ -1,4 +1,7 @@
-<%= form_for([@news_event.university, @news_event]) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="form form-horizontal">
+      <%= form_for([@news_event.university, @news_event]) do |f| %>
   <% if @news_event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news_event.errors.count, "error") %> prohibited this news_event from being saved:</h2>
@@ -11,23 +14,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <label class="col-md-2">Title</label>
+    <input type="text" class="col-md-10" name="title">
   </div>
-  <div class="field">
-    <%= f.label :post_date %><br>
-    <%= f.datetime_select :post_date %>
+  <div class="form-group">
+    <label class="col-md-2">Post_date</label>
+    <input type="text" class="col-md-10" name="post_date">
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+  <div class="form-group">
+    <label class="col-md-2">Author</label>
+    <input type="text" class="col-md-10" name="author">
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+  <div class="form-group">
+    <label class="col-md-2">Content</label>
+    <input type="text" class="col-md-10" name="content">
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-success pull-right" type=submit>Submit</button>
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
+

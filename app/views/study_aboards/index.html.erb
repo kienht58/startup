@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<h1>Listing Study Aboards</h1>
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+<h1 style="text-align:center">Listing Study Aboards</h1>
 
 <table>
-  <thead>
+  <thead class="table tabel-striped table-bordered">
     <tr>
       <th>Title</th>
       <th>Destination</th>
@@ -29,9 +36,9 @@
         <td><%= study_aboard.requirements %></td>
         <td><%= study_aboard.content %></td>
         <td><%= study_aboard.contact %></td>
-        <td><%= link_to 'Show', [study_aboard.university, study_aboard] %></td>
-        <td><%= link_to 'Edit', edit_university_study_aboard_path(study_aboard.university, study_aboard) %></td>
-        <td><%= link_to 'Destroy', [study_aboard.university, study_aboard], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button class="btn btn-success"><%= link_to 'Show', [study_aboard.university, study_aboard] %></button> </td>
+        <td> <button class="btn btn-info"><%= link_to 'Edit', edit_university_study_aboard_path(study_aboard.university, study_aboard) %></button> </td>
+        <td><button class="btn btn-danger"><%= link_to 'Destroy', [study_aboard.university, study_aboard], method: :delete, data: { confirm: 'Are you sure?' } %></button> </td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +46,12 @@
 
 <br>
 
-<%= link_to 'New Study Aboard', new_university_study_aboard_path %>
+<button class="btn btn-success"><%= link_to 'New Study Aboard', new_university_study_aboard_path %></button> 
+</div>
+
+
+<% end %>
+
+</html>
+
+

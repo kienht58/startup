@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<%= render layout: 'shared/search_box' do %>
+
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -20,5 +28,10 @@
   <%= @news_event.content %>
 </p>
 
-<%= link_to 'Edit', edit_university_news_event_path(@news_event.university, @news_event) %> |
-<%= link_to 'Back', university_path(@news_event.university) %>
+<button class="btn btn-info"><%= link_to 'Edit', edit_university_news_event_path(@news_event.university, @news_event) %></button>
+<button class="btn btn-danger"><%= link_to 'Back', university_path(@news_event.university) %></button> 
+</div>
+<% end %>
+
+</html>
+

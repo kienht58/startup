@@ -1,4 +1,7 @@
-<%= form_for(@university) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="form form-horizontal">
+      <%= form_for(@university) do |f| %>
   <% if @university.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@university.errors.count, "error") %> prohibited this university from being saved:</h2>
@@ -10,40 +13,45 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <label class="col-md-2">Name</label>
+    <input type="text" name="name" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+  <div class="form-group">
+    <label class="col-md-2">Location</label>
+    <input type="text" name="location" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :introduction %><br>
-    <%= f.text_area :introduction %>
+  <div class="form-group">
+    <label class="col-md-2">Introduction</label>
+    <input type="text" name="introduction" class="col-md-10"> 
   </div>
-  <div class="field">
-    <%= f.label :contact %><br>
-    <%= f.text_area :contact %>
+  <div class="form-group">
+    <label class="col-md-2">Contact</label>
+    <input type="text" name="contact" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :cooperation %><br>
-    <%= f.text_area :cooperation %>
+  <div class="form-group">
+    <label class="col-md-2">Cooperation</label>
+    <input type="text" name="cooperation" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :rank %><br>
-    <%= f.number_field :rank %>
+  <div class="form-group">
+    <label class="col-md-2">Rank</label>
+    <input type="text" name="rank" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :reputation %><br>
-    <%= f.number_field :reputation %>
+  <div class="form-group">
+    <label class="col-md-2">Reputation</label>
+    <input type="text" name="reputation" class="col-md-10">
   </div>
-  <div class="field">
-    <%= f.label :checked %><br>
-    <%= f.number_field :checked %>
+  <div class="form-group">
+    <label class="col-md-2">Checked</label>
+    <input type="text" name="checked" class="col-md-10">
   </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-success pull-right" type="Submit">Submit</button> 
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
+
+

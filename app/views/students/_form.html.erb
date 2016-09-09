@@ -1,4 +1,7 @@
-<%= form_for(@student) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="form form-horizontal">
+      <%= form_for(@student) do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student.errors.count, "error") %> prohibited student from being saved:</h2>
@@ -11,40 +14,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <label class="col-md-2">Email</label>
+    <input type="text" class="col-md-10" name="email">
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <label class="col-md-2">Name</label>
+    <input type="text" class="col-md-10" name="name">
   </div>
-  <div class="field">
-    <%= f.label :university %><br>
-    <%= f.text_field :university %>
+  <div class="form-group">
+    <label class="col-md-2">University</label>
+    <input type="text" class="col-md-10" name="university">
   </div>
-  <div class="field">
-    <%= f.label :major %><br>
-    <%= f.text_field :major %>
+  <div class="form-group">
+    <label class="col-md-2">Major</label>
+    <input type="text" class="col-md-10" name="major">
   </div>
-  <div class="field">    
-    <%= f.label :interestedfield %><br>    
-    <%= f.text_field :interestedfield %>    
+  <div class="form-group">    
+    <label class="col-md-2">Interested field</label>
+    <input type="text" class="col-md-10" name="interestedfield">
   </div>    
-  <div class="field">    
-    <%= f.label :history %><br>    
-    <%= f.text_field :history %>    
+  <div class="form-group">
+    <label class="col-md-2">History</label>
+    <input type="text" class="col-md-10" name="hisory">      
   </div>    
-  <div class="field">    
-    <%= f.label :achievement %><br>    
-    <%= f.text_field :achievement %>    
+  <div class="form-group">  
+    <label class="col-md-2">Achivement</label>
+    <input type="text" class="col-md-10" name="achivement">    
   </div>    
-  <div class="field">    
-    <%= f.label :hope %><br>    
-    <%= f.text_field :hope %>    
+  <div class="form-group">   
+    <label class="col-md-2">Hope</label>
+    <input type="text" class="col-md-10" name="hope">     
   </div>  
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-success pull-right" type="submit">Submit</button>
   </div>
   
 <% end %>
+    </div>
+  </div>
+</div>
+

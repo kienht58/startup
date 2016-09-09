@@ -1,4 +1,7 @@
-<%= form_for([@study_aboard.university, @study_aboard]) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="form form-horizontal">
+      <%= form_for([@study_aboard.university, @study_aboard]) do |f| %>
   <% if @study_aboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@study_aboard.errors.count, "error") %> prohibited this study_aboard from being saved:</h2>
@@ -11,39 +14,43 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <label class="col-md-2">Title</label>
+    <input type="text" class="col-md-10" name="title">
   </div>
-  <div class="field">
-    <%= f.label :destination %><br>
-    <%= f.text_field :destination %>
+  <div class="form-group">
+    <label class="col-md-2">Destination</label>
+    <input type="text" class="col-md-10" name="destination">
   </div>
-  <div class="field">
-    <%= f.label :start_time %><br>
-    <%= f.datetime_select :start_time %>
+  <div class="form-group">
+    <label class="col-md-2">Start_time</label>
+    <input type="text" class="col-md-10" name="start_time">
   </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
+  <div class="form-group">
+    <label class="col-md-2">Duration</label>
+    <input type="text" class="col-md-10" name="duration">
   </div>
-  <div class="field">
-    <%= f.label :sponsor %><br>
-    <%= f.text_field :sponsor %>
+  <div class="form-group">
+    <label class="col-md-2">Sponsor</label>
+    <input type="text" class="col-md-10" name="sponsor">
   </div>
-  <div class="field">
-    <%= f.label :requirements %><br>
-    <%= f.text_area :requirements %>
+  <div class="form-group">
+    <label class="col-md-2">Requirements</label>
+    <input type="text" class="col-md-10" name="requirements">
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+  <div class="form-group">
+    <label class="col-md-2">Content</label>
+    <input type="text" class="col-md-10" name="content">
   </div>
-  <div class="field">
-    <%= f.label :contact %><br>
-    <%= f.text_area :contact %>
+  <div class="form-group">
+    <label class="col-md-2">Contact</label>
+    <input type="text" class="col-md-10" name="contact">
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn btn-success" type="submit">Submit</button>
   </div>
 <% end %>
+
+    </div>
+  </div>
+</div>

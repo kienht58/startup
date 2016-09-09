@@ -1,6 +1,20 @@
-<h1>Editing University</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<%= render layout: 'shared/search_box' do %>
+<div class="container">
+	<h1 style="text-align:center">Editing University</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @university %> |
-<%= link_to 'Back', universities_path %>
+<button class="btn btn-success"><%= link_to 'Show', @university %></button>
+<button class="btn btn-danger"><%= link_to 'Back', universities_path %></button>
+</div>
+
+
+<% end %>
+
+</html>

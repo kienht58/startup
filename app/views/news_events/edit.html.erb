@@ -1,5 +1,21 @@
-<h1>Editing News Event</h1>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
 
-<%= render 'form' %>
+<%= render layout: 'shared/search_box' do %>
 
-<%= link_to 'Back', university_news_event_path(@news_event.university, @news_event) %>
+	<div class="container">
+		<h1 style="text-align:center">Editing News Event</h1>
+		<%= render 'form' %>
+
+	<button class="btn btn-danger"><%= link_to 'Back', university_news_event_path(@news_event.university, @news_event) %></button> 
+	</div>
+
+<% end %>
+
+</html>
+
+
+
+
